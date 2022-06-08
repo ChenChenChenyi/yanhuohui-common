@@ -19,6 +19,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 @Slf4j
+//这个注解配合@ExceptionHandler注解使用，捕获controller中的异常，应用到所有@RequestMapping中
 @RestControllerAdvice
 public class ExceptionControllerAdvice {
 
