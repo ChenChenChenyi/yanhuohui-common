@@ -73,7 +73,7 @@ public class ExceptionControllerAdvice {
         // 从异常对象中拿到ObjectError对象
         ObjectError objectError = e.getBindingResult().getAllErrors().get(0);
         // 然后提取错误提示信息进行返回
-        return new BaseResponse<>(CommonErrorCode.PARAMETER_ERROR);
+        return new BaseResponse<>(CommonErrorCode.PARAMETER_ERROR,objectError.getDefaultMessage(),null,null);
     }
 
     protected String getMessage(String code, Object[] params){
